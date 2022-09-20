@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site":"abhishekkushwah827-ama-zon-clone",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -22,6 +23,9 @@
     ],
     "predeploy": [
       "npm --prefix \"$RESOURCE_DIR\" run lint"
-    ]
+    ],
+    "source": "functions"
   }
 }
+
+

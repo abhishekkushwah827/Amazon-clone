@@ -26,13 +26,18 @@ const Payment = () => {
         // generate the special stripe secret which allows us to charge a customer
         const getClientSecret = async () => {
             //call Backend API to get secretKey (cloud functions)
-            const response = await axios({
-                method: "post",
-                // Stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${getBasketTotal(basket)}`
-            });
+            try {
+                const response = await axios({
+                    method: "post",
+                    // Stripe expects the total in a currencies subunits
+                    url: `/payments/create?total=${getBasketTotal(basket)}`
+                });
 
-            setClientSecret(response.data.clientSecret);
+                setClientSecret(response.data.clientSecret);
+            } catch (e) {
+               alert(e.message + ", Please make sure cloud server is running...!");
+            }
+
         }
 
         getClientSecret();
