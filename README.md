@@ -12,3 +12,4 @@ Build Amazon application clone using React and Firebase.
 
 
 ## Screenshots
+![Screenshot (14)](https://user-images.githubusercontent.com/63289147/191416843-c0035c75-b6c5-4128-be1b-cccb4e5c32d9.png)
